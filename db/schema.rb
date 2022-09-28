@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_09_28_043514) do
+ActiveRecord::Schema[7.0].define(version: 2022_09_28_044426) do
+  create_table "checkout_items", force: :cascade do |t|
+    t.integer "product_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["product_id"], name: "index_checkout_items_on_product_id"
+  end
+
   create_table "products", force: :cascade do |t|
     t.string "sku"
     t.integer "unit_price"
@@ -18,4 +25,5 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_28_043514) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "checkout_items", "products"
 end
