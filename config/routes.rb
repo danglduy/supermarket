@@ -2,5 +2,5 @@ Rails.application.routes.draw do
   root "home#index"
 
   resources :products
-  # root "articles#index"
+  resources :checkout_items
 end

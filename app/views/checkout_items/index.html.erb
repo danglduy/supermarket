@@ -1,0 +1,12 @@
+<table>
+  <tr>
+    <th>Item</th>
+    <th>Unit price</th>
+  </tr>
+  <% @checkout_items.each do |checkout_item| %>
+    <tr>
+      <td><%= checkout_item.product.sku %></td>
+      <td><%= checkout_item.product.unit_price %></td>
+    </tr>
+  <% end %>
+</table>
