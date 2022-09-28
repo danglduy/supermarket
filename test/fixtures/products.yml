@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sku: MyString
+  unit_price: 1
+
+two:
+  sku: MyString
+  unit_price: 1
