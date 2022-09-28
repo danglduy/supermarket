@@ -21,6 +21,7 @@ class CheckoutService
       price += item.product.unit_price
     end
 
+    # Sample value: {"A" => 3, "B" => 1}
     grouped_count_special_price_items =
       special_price_items.group_by {|item| item.product[:sku]}
                          .transform_values(&:count)
